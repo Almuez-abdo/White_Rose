@@ -1,0 +1,251 @@
+/* ganaral*/
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing : border-box;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    direction: rtl;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #3391E7;
+}
+
+.logo {
+    font-size: 30px;
+    float: left;
+    margin-top: 20px;
+}
+
+.logo a {
+    font-size: 30px;
+    color: #fff;
+}
+
+.top-nav {
+    float: right;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    unicode-bidi: isolate;
+}
+
+.top-nav ul li:first-child{
+    border-left: none;
+}
+
+.top-nav ul li {
+    display: inline-block;
+    border-left: 1px solid rgb(31, 132, 224);
+}
+
+.top-nav ul li a {
+    font-family: 'Ropa Sans', sans-serif;
+    background: #3391E7;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 30px;
+    display: block;
+}
+
+.top-nav li.active> a, .top-nav li> a:hover {
+    background: rgb(50, 133, 209);
+    border-left-color: rgb(50, 133, 209);
+}
+
+.content-grids {
+    background: #3391E7;
+    padding: 10px 0px;
+    margin-top: 20px;
+
+}
+
+.group {
+    zoom: 1;
+}
+
+.section {
+    clear: both;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.group:before, .group:after {
+    content: "";
+    display: table;
+}
+
+
+.images_1_of_3 {
+    width: 29.2%;
+    padding: 1.5%;
+    border-radius: 1.1em;
+}
+
+.listview_1_of_3:first-child {
+    margin-left: 0;
+}
+
+.listview_1_of_3 {
+    display: block;
+    float: left;
+    margin: 0% 0 0% 1.6%;
+    background: #F1F6F9;
+}
+
+.listimg_1_of_2 {
+    width: 32.2%;
+}
+
+.listimg {
+    display: block;
+    float: left;
+}
+
+.images_1_of_3 img {
+    max-width: 100%;
+    display: block;
+}
+
+.text {
+    display: block;
+    float: left;
+    margin: 0% 0 0% 3.6%;
+}
+
+.list_1_of_2 h3{
+    color: #3391E7;
+    margin-bottom: 0.2em;
+    margin-top: 0;
+    font-size: 2em;
+    font-family: 'Ropa Sans', sans-serif;
+    font-weight: normal;
+    letter-spacing: -1px;
+}
+
+.list_1_of_2 h3, .span_1_of_3 h3 {
+    font-size: 1.5em;
+}
+
+.list_1_of_2 p{
+    font-size: 0.8125em;
+    color: #3391E7;
+    line-height: 1.5em;
+    font-family: Arial, "Helvetica Neue", "Helvetica", Tahoma, Verdana, sans-serif;
+    padding: 0;
+}
+
+.list_1_of_2 .button {
+    line-height: 1.9em;
+    margin-top: 0.2em;
+}
+
+.list_1_of_2 .button a {
+    font-family: 'Ropa Sans', sans-serif;
+    color: rgb(139, 139, 139);
+    font-size: 1em;
+}
+
+.info {
+    font-size: 20px;
+    background-color: #6b6969;
+    color: #fff;
+    margin: 20px 0px;
+    padding: 10px;
+}
+
+.footer {
+    background: #3391E7;
+    padding: 15px 4px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-left {
+    text-align: end;
+}
+
+.footer-left ul li {
+    display: inline-block;
+}
+
+.footer-left ul li a {
+    font-family: 'Ropa Sans', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    display: block;
+    margin-right: 10px;
+}
+
+.footer-icon {
+    text-align: center;
+    color: #1c1a1ab0;
+}
+
+
+/* Start Patient Login Page */
+.patient_h {
+    margin-top: 30px;
+    text-align: center;
+    color: #272222bd;
+}
+
+.form-login {
+    width: fit-content;
+    padding-right: 30px;
+}
+
+.patient_t {
+    text-align: center;
+    margin: 10px 0px;
+}
+/* End Patient Login Page */
+
+/*Start Forgot Page*/
+.forgot {
+    margin: 30px 0px;
+    padding: 10px 20px;
+    text-align: center;
+    color: #fff;
+    background: #000;
+    font-size: 20px;
+}
+/*End Forgot Page*/
+
+/*Star Registar Page*/
+.btnNew{
+    color: #3391E7;
+    border: none;
+    margin: 20px;
+}
+/*End Registar Page*/
+
+/*Start Profile Page*/
+
+
+/*End Profile Page*/
+
+
