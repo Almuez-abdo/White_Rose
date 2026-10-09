@@ -57,9 +57,9 @@
                 <form  action="<?php echo $_SERVER['PHP_SELF']; ?>" method= "POST" enctype= "multipart/form-data">';
                 <?php
                     if(! empty($pro['Patient_Avatar'])){
-                        echo '<img src="upload/avatar/Patient/' . $pro['Patient_Avatar'] . '" alt="" class="card-img-top">';
+                        echo '<img src="upload/avatar/Patient/' . $pro['Patient_Avatar'] . '" alt="" class="card-img-top avatar-img">';
                     }else{
-                        echo '<img src="layout/images/d-1-7.png" alt="" class="card-img-top">';
+                        echo '<img src="layout/images/pro.jpeg" alt="صورة افتراضية" class="card-img-top avatar-img avatar-placeholder">';
                     }
                 ?> 
                     <div class= "load_image">

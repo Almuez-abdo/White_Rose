@@ -1,5 +1,5 @@
 <?php
-    include 'conect.php';
+    include '..\conect.php';
 
     $fuc  = 'includes/func/';
     $css  = 'layout/css/';

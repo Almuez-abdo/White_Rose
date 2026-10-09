@@ -1,4 +1,4 @@
-/* ganaral*/
+/* Start Ganaral Page*/
 *{
     padding: 0px;
     margin: 0px;
@@ -24,6 +24,10 @@ body{
     display: flex;
     flex-direction: column;
 }
+
+/* End Ganaral Page */
+
+/* Start Header Page */
 
 .header {
     background-color: #3391E7;
@@ -72,6 +76,41 @@ li {
     background: rgb(50, 133, 209);
     border-left-color: rgb(50, 133, 209);
 }
+/* End Header Page */
+
+/* Start Footer Page */
+
+.footer {
+    background: #3391E7;
+    padding: 15px 4px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-left {
+    text-align: end;
+}
+
+.footer-left ul li {
+    display: inline-block;
+}
+
+.footer-left ul li a {
+    font-family: 'Ropa Sans', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    display: block;
+    margin-right: 10px;
+}
+
+.footer-icon {
+    text-align: center;
+    color: #1c1a1ab0;
+}
+/* End Footer Page */
+
+/* Start Index Page */
 
 .content-grids {
     background: #3391E7;
@@ -176,34 +215,7 @@ li {
     padding: 10px;
 }
 
-.footer {
-    background: #3391E7;
-    padding: 15px 4px;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-}
-
-.footer-left {
-    text-align: end;
-}
-
-.footer-left ul li {
-    display: inline-block;
-}
-
-.footer-left ul li a {
-    font-family: 'Ropa Sans', sans-serif;
-    color: #fff;
-    text-transform: uppercase;
-    display: block;
-    margin-right: 10px;
-}
-
-.footer-icon {
-    text-align: center;
-    color: #1c1a1ab0;
-}
+/* End Index Page */
 
 
 /* Start Patient Login Page */

@@ -6,7 +6,7 @@
                 </ul>
             </div>
             <div class="footer-icon">
-                Create By Estabrag &copy; <?php echo date("Y"); ?>
+                Create By Ezzo Service &copy; <?php echo date("Y"); ?>
             </div>
         </div>
     </body>

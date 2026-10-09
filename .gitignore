@@ -1,0 +1,9 @@
+﻿vendor/
+.env
+*.log
+*.onetoc2
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+

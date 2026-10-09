@@ -107,11 +107,11 @@ ob_start();
                         <?php
                         if(isset($_POST['forgotPat'])){
                             echo '<button type="submit" class="btn btn-primary pull-right" name="submitPat">
-                            دخول <i class="fa fa-arrow-circle-right"></i>
+                            تحقق <i class="fa fa-arrow-circle-right"></i>
                             </button>';
                         }elseif(isset($_POST['forgotDoc'])){
                             echo '<button type="submit" class="btn btn-primary pull-right" name="submitDoc">
-                            دخول <i class="fa fa-arrow-circle-right"></i>
+                            تحقق <i class="fa fa-arrow-circle-right"></i>
                             </button>';
                         }
                         ?>

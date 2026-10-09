@@ -24,7 +24,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $upPe->execute(array($shaPassPe, $userPe));
 
             
-            $theMsg= '<div class= "alert alert-success"> مرحبا ' . $namePe . '  تم أرسال رمز التحقق الي البريد الالكتروني المسجل </div>';
+            $theMsg= '<div class= "alert alert-success"> مرحبا ' . $namePe . '  تم تغيير كلمة المرور بنجاح </div>';
             redirectHome($theMsg, 3, 'index.php');
         }
     }elseif(isset($_POST['submitDoc'])){
@@ -41,7 +41,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $upDoc = $con->prepare("UPDATE doctor SET Doctor_Pass = ? WHERE Doctor_ID = ?");
             $upDoc->execute(array($shaPassDoc, $userDoc));
 
-            $theMsg= '<div class= "alert alert-success"> مرحبا ' . $nameDoc . '  تم أرسال رمز التحقق الي البريد الالكتروني المسجل </div>';
+            $theMsg= '<div class= "alert alert-success"> مرحبا ' . $nameDoc . '  تم تغيير كلمة المرور بنجاح </div>';
             redirectHome($theMsg, 3, 'index.php');
         }
     }

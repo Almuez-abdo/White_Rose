@@ -5,7 +5,7 @@ ob_start();
     $pageTitle = "دخول الاطباء";
 
     if (isset($_SESSION['Name_Doctor'])){
-        header('location: home.blade.php');
+        header('location: home.php');
         exit();
     }
     include "init.php";
@@ -50,7 +50,7 @@ ob_start();
                 $_SESSION['Name_Doctor']= $stLog['Doctor_Name'];
                 $_SESSION['Id'] = $stLog['ID'];
                 
-                header('location: home.blade.php');
+                header('location: home.php');
                 exit();
 
                 $_SESSION['attempts'] = 0;

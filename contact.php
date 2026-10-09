@@ -107,8 +107,8 @@ ob_start();
                                 <input class="form-control" type="mail" name= "mail" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$" placeholder= "example@email.com" autocomplete="off" required/>
                                 <span class= "asterisk">*</span>
                             </div>
-                            <input type="submit" class="btn btn-primary my-3" value="إرسال">
-                        </from>
+                            <input type="submit" class="btn btn-primary my-3" value="بحث">
+                        </form>
                     </div>
                 </div>
             </div>

@@ -62,9 +62,9 @@ if(isset($_SESSION['Name_Boss'])){
                             echo "<td>" .$doc['Doctor_ID'] . "</td>";
                             echo "<td>" .$doc['Doctor_Name'] . "</td>";
                               echo "<td>";
-                                echo "<a href= '../active.blade.php?do=DeleteDoc&userID=" . $doc['Doctor_ID'] . " ' class= 'btn btn-danger confirm'>
+                                echo "<a href= '../active.php?do=DeleteDoc&userID=" . $doc['Doctor_ID'] . " ' class= 'btn btn-danger confirm'>
                                     <i class= 'fa fa-close fa-sm ms-1'></i>حزف</a>";
-                                echo "<a href= '../active.blade.php?do=emprove&userID=" . $doc['Doctor_ID'] . " ' class= 'btn btn-success confirm'>
+                                echo "<a href= '../active.php?do=emprove&userID=" . $doc['Doctor_ID'] . " ' class= 'btn btn-success confirm'>
                                     <i class= 'fa fa-close fa-sm ms-1'></i>ترقية</a>"; 
                             echo "</td>";
                         echo "<tr>";                   
@@ -92,9 +92,9 @@ if(isset($_SESSION['Name_Boss'])){
                             echo "<td>" .$boss['Doctor_ID'] . "</td>";
                             echo "<td>" .$boss['Doctor_Name'] . "</td>";
                             echo "<td>";
-                                echo "<a href= '../active.blade.php?do=DeleteDoc&userID=" . $boss['Doctor_ID'] . " ' class= 'btn btn-danger confirm'>
+                                echo "<a href= '../active.php?do=DeleteDoc&userID=" . $boss['Doctor_ID'] . " ' class= 'btn btn-danger confirm'>
                                     <i class= 'fa fa-close fa-sm ms-1'></i>حزف</a>";
-                                echo "<a href= '../active.blade.php?do=drop&userID=" . $boss['Doctor_ID'] . " ' class= 'btn btn-info confirm'>
+                                echo "<a href= '../active.php?do=drop&userID=" . $boss['Doctor_ID'] . " ' class= 'btn btn-info confirm'>
                                     <i class= 'fa fa-close fa-sm ms-1'></i>تخفيض</a>"; 
                             echo "</td>";
                         echo "<tr>";                   

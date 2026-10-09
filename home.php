@@ -36,19 +36,19 @@ ob_start();
                 <h2>مرحباً بك <?php echo $_SESSION['Name_Patient'] ?> في مستشفى الوردة البيضاء لعلاج الإدمان</h2>
                 <h4>نحن هنا لمساعدتك على بداية حياة جديدة خالية من الإدمان.</h4>
             </div>
-            <div class="row" style="display: flex; align-items: center; justify-content: space-between;">
+            <div class="row profile-row">
                 <h2>البيانات الشخصية :- </h2>
                 <hr>
                 <div class="col-md-5 col-lg-5">
-                    <div style="border-radius: 50px; width: 25%;">
+                    <div class="avatar-wrap">
                         <?php
                         if(! empty($pat['Patient_Avatar'])){
-                            echo '<img src="upload/avatar/Patient/' . $pat['Patient_Avatar'] . '" alt="" class="card-img-top">';
+                            echo '<img src="upload/avatar/Patient/' . $pat['Patient_Avatar'] . '" alt="" class="card-img-top avatar-img">';
                         }else{
-                            echo '<img src="layout/images/pro.jpeg" alt="" class="card-img-top">';
+                            echo '<img src="layout/images/pro.jpeg" alt="" class="card-img-top avatar-img">';
                         }
                     ?>
-                    <a href="avatar.blade.php">تغيير الصورة </a>
+                    <a href="avatar.php">تغيير الصورة </a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6">
@@ -61,10 +61,9 @@ ob_start();
                 </div> 
             </div>
             <hr>
-            <div class="row" style="margin: 20px 10px; display: flex; align-items: baseline; color: #eee;
-                                    justify-content: space-between; background-color: #2b2929; ">
+            <div class="row treatment-box">
                 <div class="col-md-5">
-                    <h2 style="margin: 20px 5px 10px 0px;">تفاصيل العلاج :- </h2>
+                    <h2 class="treatment-title">تفاصيل العلاج :- </h2>
                     <hr>    
                     <h4><?php echo $pat['Step_Content'] ?></h4>
                     <hr>
@@ -73,7 +72,7 @@ ob_start();
                     <h2> شكوي او مقترح :- </h2>
                     <hr>
                     <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
-                        <textarea name="message" placeholder="النص" required style="width: -webkit-fill-available;"></textarea>
+                        <textarea name="message" placeholder="النص" required class="msg-box"></textarea>
                         <input type="submit" class="btn btn-primary" value="أرسال">
                     </form> 
                 </div>
@@ -108,19 +107,19 @@ ob_start();
                 <h2>مرحباً بك د <?php echo $doc['Doctor_Name'] ?> في مستشفى الوردة البيضاء لعلاج الإدمان</h2>
                 <h4>الطب رساله أنسانية وأنتم ملائكتنا</h4>
             </div>
-            <div class="row" style="display: flex; align-items: center; justify-content: space-between;">
+            <div class="row profile-row">
                 <h2>البيانات الشخصية :- </h2>
                 <hr>
                 <div class="col-md-5 col-lg-5">
-                    <div style="border-radius: 50px; width: 25%;">
+                    <div class="avatar-wrap">
                         <?php
                         if(! empty($doc['Doctor_Avatar'])){
-                            echo '<img src="upload/avatar/Doctor/' . $doc['Doctor_Avatar'] . '" alt="" class="card-img-top">';
+                            echo '<img src="upload/avatar/Doctor/' . $doc['Doctor_Avatar'] . '" alt="" class="card-img-top avatar-img">';
                         }else{
-                            echo '<img src="layout/images/pro.jpeg" alt="" class="card-img-top">';
+                            echo '<img src="layout/images/pro.jpeg" alt="" class="card-img-top avatar-img">';
                         }
                     ?>
-                    <a href="avatar.blade.php">تغيير الصورة </a>
+                    <a href="avatar.php">تغيير الصورة </a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6">
@@ -131,14 +130,13 @@ ob_start();
                 </div> 
             </div>
             <div>
-                <h2 style="margin: 20px 5px 10px 0px;">تفاصيل العلاج :- </h2>
+                <h2 class="treatment-title">تفاصيل العلاج :- </h2>
                 <hr>
                 <div class="row">
                 <?php
                 foreach($doctor as $dPat){
                 ?>
-                    <div class="col-md-5 col-lg-5" style="background-color: #2b2727; color: #eee;
-                                                            padding: 10px; border-radius: 25px; margin: 5px;">
+                    <div class="col-md-5 col-lg-5 doc-pat-card">
                         <h4><span>أسم المريض  : </span> <?php echo $dPat['Patient_Name'] ?></h4>
                         <h4><span>بريد المريض : </span> <?php echo $dPat['Patient_Email'] ?></h4>
                         <h4><span>هاتف المريض : </span> <?php echo $dPat['Patient_Phone'] ?></h4>
@@ -148,7 +146,7 @@ ob_start();
                         if($dPat['Doctor_Report'] == NULL){
                             echo '<form action="' . $_SERVER['PHP_SELF'] . '?>" method="POST">';
                                 echo '<input type="hidden"  name= "pat_Id" value=" ' . $dPat['Patient_ID'] . '" >';
-                                echo '<textarea name="report" placeholder="النص" required style="width: -webkit-fill-available;"></textarea>';
+                                echo '<textarea name="report" placeholder="النص" required class="msg-box"></textarea>';
                                 echo '<input type="submit" class="btn btn-primary" value="أرسال">';
                             echo '</form>';
                         }else{
@@ -181,19 +179,19 @@ ob_start();
                 <h2>مرحباً بك د <?php echo $doc['Doctor_Name'] ?> في مستشفى الوردة البيضاء لعلاج الإدمان</h2>
                 <h4>الطب رساله أنسانية وأنتم ملائكتنا</h4>
             </div>
-            <div class="row" style="display: flex; align-items: center; justify-content: space-between;">
+            <div class="row profile-row">
                 <h2>البيانات الشخصية :- </h2>
                 <hr>
                 <div class="col-md-5 col-lg-5">
-                    <div style="border-radius: 50px; width: 25%;">
+                    <div class="avatar-wrap">
                         <?php
                         if(! empty($doc['Doctor_Avatar'])){
-                            echo '<img src="upload/avatar/Doctor/' . $doc['Doctor_Avatar'] . '" alt="" class="card-img-top">';
+                            echo '<img src="upload/avatar/Doctor/' . $doc['Doctor_Avatar'] . '" alt="" class="card-img-top avatar-img">';
                         }else{
-                            echo '<img src="layout/images/pro.jpeg" alt="" class="card-img-top">';
+                            echo '<img src="layout/images/pro.jpeg" alt="" class="card-img-top avatar-img">';
                         }
                     ?>
-                    <a href="avatar.blade.php">تغيير الصورة </a>
+                    <a href="avatar.php">تغيير الصورة </a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6">
@@ -233,7 +231,7 @@ ob_start();
                         echo "<td>" . $buss['Patient_Message'] . "</td>";
                         echo "<td>" . $buss['Doctor_Report'] . "</td>";
                         echo "<td>
-                                <a href= 'active.blade.php?do=DeletePat&userID=" . $buss['Patient_ID'] . " ' class= 'btn btn-danger confirm'>
+                                <a href= 'active.php?do=DeletePat&userID=" . $buss['Patient_ID'] . " ' class= 'btn btn-danger confirm'>
                             <i class= 'fa fa-close fa-sm ms-1'></i>حزف</a>
                             </td>";
                     echo "</tr>";
@@ -272,7 +270,7 @@ ob_start();
                             echo "<td>" . $doc['Patient_Email'] . "</td>";
                             echo "<td>" . $doc['Patient_Phone'] . "</td>";
                             echo "<td>" . $doc['Patient_Age'] . "</td>";
-                            echo "<form method='POST' action='active.blade.php'>";
+                            echo "<form method='POST' action='active.php'>";
                                 echo "<input type='hidden' name='patId' value='" . $doc['Patient_ID'] . "'>";
                             echo "<td>";
                                     echo '<select name= "jDoc" class= "form-control" required= "requird">';
@@ -347,10 +345,10 @@ ob_start();
                         echo "</td>";
                         
                         echo "<td>
-                            <a href= 'active.blade.php?do=DeleteDoc&userID=" . $docs['Doctor_ID'] . " ' class= 'btn btn-danger confirm'>
+                            <a href= 'active.php?do=DeleteDoc&userID=" . $docs['Doctor_ID'] . " ' class= 'btn btn-danger confirm'>
                             <i class= 'fa fa-close fa-sm ms-1'></i>حزف</a>";
                         if($docs['Doctor_State'] == 0){
-                        echo "<a href= 'active.blade.php?do=Activate&userID=" . $docs['Doctor_ID'] . " ' class= 'btn btn-info'>
+                        echo "<a href= 'active.php?do=Activate&userID=" . $docs['Doctor_ID'] . " ' class= 'btn btn-info'>
                         <i class= 'fa fa-close fa-sm ms-1'></i>تفعيل</a>";
                         }
                         echo "</td>";
@@ -391,7 +389,7 @@ ob_start();
                         echo "<td>" . $consult['Cons_Phone'] . "</td>";
                         echo "<td>" . $consult['Cons_Age'] . "</td>";
                         echo "<td>" . $consult['Cons_Msg'] . "</td>";
-                        echo "<form action='active.blade.php' method='POST'>";
+                        echo "<form action='active.php' method='POST'>";
                             echo "<input type='hidden' value='" .  $consult['Cons_ID'] . "' name='consId'>";
                             echo "<td> <textarea name='ans'></textarea></td>";
                             echo "<td> <input type='submit' class='btn btn-success' name='cons_sub' value='أرسال'> </td>
